@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-text = input("What you gotta say? : ")
+# รับข้อความครั้งแรกจากผู้ใช้
+user_input = input("What you gotta say? : ")
 
-while True:
-    if text == "STOP":
-        break
-    text = input("I got that! Anything else? : ")
+# วนลูปถามไปเรื่อยๆ ตราบใดที่สิ่งที่พิมพ์มาไม่ใช่คำว่า "STOP"
+while user_input != "STOP":
+    user_input = input("I got that! Anything else? : ")

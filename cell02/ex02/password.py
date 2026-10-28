@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-correct_password = "Python is awesome"
+correct_password = "1234"
 
 user_input = input()
 
