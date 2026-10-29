@@ -1,0 +1,37 @@
+# สมุดบัญชีจิ๋ว (Mini Wallet) + ฟีเจอร์ล้างข้อมูลเริ่มใหม่!
+
+history = []   
+money = 0      
+
+while True:
+    print(f"\n💰 เงินคงเหลือ: {money} บาท")
+    # เพิ่มเมนูที่ 3 เข้ามา
+    print("1. จดเงิน   2. ดูประวัติ   3. เริ่มใหม่ (Reset)   4. ออก")
+    
+    choice = input("เลือกเมนู (1-4): ")
+    
+    if choice == "1":
+        name = input("ชื่อรายการ: ")
+        amount = float(input("จำนวนเงิน (ถ้าจ่าย ให้พิมพ์ลบ เช่น -50): "))
+        
+        money = money + amount
+        history.append(f"{name} = {amount}")
+        print("✅ จดเรียบร้อย!")
+        
+    elif choice == "2":
+        print("\n--- ประวัติการใช้เงิน ---")
+        for item in history:
+            print(item)
+            
+    elif choice == "3":
+        # ฟีเจอร์ใหม่: ล้างข้อมูลให้เกลี้ยง!
+        history = []     # คืนค่ากลับเป็นกล่องเปล่า
+        money = 0        # คืนค่าเงินกลับเป็นศูนย์
+        print("✨ ล้างข้อมูล เริ่มต้นใหม่เรียบร้อย!")
+            
+    elif choice == "4":
+        print("👋 บ๊ายบาย!")
+        break
+        
+    else:
+        print("❌ เลือกแค่ 1, 2, 3 หรือ 4 นะ")

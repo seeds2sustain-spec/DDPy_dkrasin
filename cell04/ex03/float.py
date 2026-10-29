@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
-number_str = input("Give me a number: ")
+original_array = [2, 8, 9, 48, 8, 22, -12, 2]
 
-# แปลงข้อความให้เป็น float (ตามคำใบ้ Google string to float)
-number_float = float(number_str)
+# ใช้ List Comprehension: วนลูป for และบวก 2 จบในบรรทัดเดียว
+new_array = [num + 2 for num in original_array]
 
-# ตรวจสอบว่าตัวเลขนั้นเป็นจำนวนเต็มหรือไม่ (เช่น 42 หรือ 42.00)
-if number_float.is_integer():
-    print("This number is an integer.")
-else:
-    print("This number is a decimal.")
+print(f"Original array: {original_array}")
+print(f"New array: {new_array}")
